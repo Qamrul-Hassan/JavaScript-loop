@@ -1,50 +1,76 @@
-//10. Write a program that prints "Even" for numbers divisible by 2 and "Odd" for others
+/*9. Calculate the average of the numbers in the array using a for loop
 
 //Why use for loop?
-//Since the range of numbers (1 to 50) is known, a for loop is ideal.
-//Within each iteration, the loop checks if the current number is divisible by 2. 
-//If true, it prints "Even", otherwise "Odd". 
-//This is a common pattern for simple conditions that involve iterating over a range of numbers.
+//The for loop iterates over each number in the array and sums them up. 
+//After summing, we divide by the total number of elements to get the average. 
+//This is a simple and structured way to calculate an average, 
+//as it leverages the ability of the for loop to step through each element.*/
 
-for (let i = 1 ; i <= 50; i++) {            //1. For Loop Initialization:
-                                            //What it does:
-                                                //This line initializes a for loop that starts with i set to 1.
-                                                //The loop will continue to execute as long as i is less than or equal to 50.
-                                                //After each iteration of the loop, i is incremented by 1 due to i++.
-                                           // Purpose:
-                                                //This structure allows us to iterate through all the integers from 1 to 50.
-                                                //The loop variable i is used to represent the current number in each iteration.
-    
-    
-    
-    if (i % 2 === 0) {                      //2. If Condition:
-                                            //What it does:
-                                                //The expression i % 2 calculates the remainder when i is divided by 2.
-                                                //If the remainder is 0, it means that i is divisible by 2, which indicates that i is an even number.
-                                            //Purpose:
-                                                //This condition is used to check whether the current number i is even.
+let nums = [10, 20, 30, 40, 50];            // Initializes an array of numbers.
+let total = 0;                              // Initializes a variable to store the total sum of the numbers.
 
-
-
-
-        console.log(i + " is Even");        //3. Print Even Numbers:
-                                            //What it does:
-                                                //If the condition in the if statement is true (meaning i is even), this line executes.
-                                                //It prints the value of i followed by the string " is Even".
-                                            //Example:
-                                                //If i = 2, the output will be 2 is Even.
-
-    } else {                                //4. Else Condition:
-        console.log(i + " is Odd");         //What it does:
-                                                //If the if condition is false (meaning i is not even, hence odd), the code inside the else block executes.
-                                                //This line prints the value of i followed by " is Odd".
-                                            //Example:
-                                                //If i = 1, the output will be 1 is Odd.
-                                            //5. Loop Execution:
-                                                //First Iteration (i = 1):
-                                                //The loop checks 1 % 2, which equals 1 (not even), so it goes to the else block and prints 1 is Odd.
-                                                //Second Iteration (i = 2):
-                                                //The loop checks 2 % 2, which equals 0 (even), so it prints 2 is Even.
-                                                //This process continues for all integers up to 50, alternating between the two print statements based on whether the number is even or odd.
-    }
+for (let i = 0; i < nums.length; i++) {
+    total += nums[i];                       // Adds the current number to the total.
 }
+let average = total / nums.length;          // Calculates the average by dividing the total by the number of elements.
+console.log(average);                       // Prints the average to the console.
+
+
+
+/*Step-by-Step Explanation:
+1. Array Initialization:
+javascript
+
+let nums = [10, 20, 30, 40, 50];
+What it does: This line creates an array named nums containing five numbers: 10, 20, 30, 40, and 50.
+Purpose: The array holds the values for which we want to calculate the average.
+2. Total Initialization:
+javascript
+
+let total = 0;
+What it does: This line initializes a variable total and sets it to 0.
+Purpose: The total variable will be used to accumulate the sum of the numbers in the array as we iterate through it.
+3. For Loop:
+javascript
+
+for (let i = 0; i < nums.length; i++) {
+What it does: This line starts a for loop that initializes i to 0 and continues as long as i is less than the length of the nums array (nums.length is 5).
+Purpose: The loop will iterate through each element of the array, allowing us to access each number by its index.
+4. Adding to Total:
+javascript
+
+total += nums[i];
+What it does: This line adds the current element in the array (indexed by i) to the total variable.
+Equivalent to: total = total + nums[i];
+Loop Execution:
+
+First iteration (i = 0):
+total = 0 + nums[0] → total = 0 + 10 → total = 10.
+Second iteration (i = 1):
+total = 10 + nums[1] → total = 10 + 20 → total = 30.
+Third iteration (i = 2):
+total = 30 + nums[2] → total = 30 + 30 → total = 60.
+Fourth iteration (i = 3):
+total = 60 + nums[3] → total = 60 + 40 → total = 100.
+Fifth iteration (i = 4):
+total = 100 + nums[4] → total = 100 + 50 → total = 150.
+After the loop completes, total will hold the sum of all elements in the array, which is 150.
+
+5. Calculating the Average:
+javascript
+
+let average = total / nums.length;
+What it does: This line calculates the average by dividing total (which is 150) by nums.length (which is 5).
+Calculation:
+average = 150 / 5 → average = 30.
+6. Print the Average:
+javascript
+
+console.log(average);
+What it does: This line prints the value of average to the console.
+Output: The output will be:
+
+30
+Summary:
+The code calculates the average of the numbers in the nums array by first summing all the elements and then dividing by the number of elements in the array.
+The final result of 30 is printed to the console, which is the average of the numbers 10, 20, 30, 40, and 50. */
