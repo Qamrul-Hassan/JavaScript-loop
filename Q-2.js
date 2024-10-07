@@ -10,22 +10,12 @@ for (let i = 2; i <= 100; i += 2) {
 
 
 
-Let’s break down the provided code step by step to understand how it works and what it accomplishes.
-
-Code:
-javascript
-Copy code
-for (let i = 2; i <= 100; i += 2) {
-    console.log(i);
-}
 
 
-
-
-/*Step-by-Step Explanation:
+/Step-by-Step Explanation:
 1. For Loop Initialization:
 javascript
-Copy code
+
 for (let i = 2; i <= 100; i += 2) {
 Initialization:
 

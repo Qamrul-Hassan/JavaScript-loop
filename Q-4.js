@@ -44,7 +44,7 @@ When index = 0, it prints array[0], which is 4.
 When index = 1, it prints array[1], which is 15, and so on.
 5. Incrementing Index:
 javascript
-Copy code
+C
 index++;
 What it does: This line increments the value of index by 1 after each iteration of the loop.
 Purpose: This is essential for moving to the next element in the array. If this line were omitted, the loop would get stuck at the first index (0), causing an infinite loop.

@@ -34,11 +34,11 @@ for (let i = 1 ; i <= 50; i++) {            /*1. For Loop Initialization:
                                             Example:
                                                 If i = 2, the output will be 2 is Even.*/
 
-    } else {                                /*4. Else Condition:
-        console.log(i + " is Odd");         What it does:
+    } else {                                //4. Else Condition:
+        console.log(i + " is Odd");         /*What it does:
                                                 If the if condition is false (meaning i is not even, hence odd), the code inside the else block executes.
                                                 //This line prints the value of i followed by " is Odd".
-                                            Example:
+                                           // Example:
                                                 //If i = 1, the output will be 1 is Odd.
                                             5. Loop Execution:
                                                 First Iteration (i = 1):
